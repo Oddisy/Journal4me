@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Play } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import tradeDashboard from "../../public/tradingDashboardHistory.png"
+import tradeDashboard from "../../public/tradingDashboardHist.png"
 
 export default function Hero() {
   return (
@@ -67,7 +67,7 @@ export default function Hero() {
           <div className="relative rounded-xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl aspect-[16/9] flex items-center justify-center bg-[url('/mockup-placeholder.jpg')] bg-cover bg-center">
             {/* Fallback visual if no image */}
             <div className="absolute inset-0 bg-zinc-900/80 flex items-center justify-center flex-col text-zinc-500">
-              <Image width={1024} height={576} loading='eager' objectFit='contain' src={tradeDashboard} alt="trade gallery picture" />
+              <Image width={1024} height={576} loading='eager' src={tradeDashboard} alt="trade gallery picture" />
               {/* <span className="text-2xl font-bold mb-2">Notion Dashboard Mockup</span> */}
               {/* <p>High-quality product screenshot goes here</p> */}
             </div>
