@@ -2,7 +2,9 @@
 
 import { motion } from 'framer-motion';
 import { ArrowRight, Play } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
+import tradeDashboard from "../../public/tradingDashboardHistory.png"
 
 export default function Hero() {
   return (
@@ -19,8 +21,8 @@ export default function Hero() {
               The Ultimate Notion Trading System
             </span>
           </motion.div>
-          
-          <motion.h1 
+
+          <motion.h1
             className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -28,8 +30,8 @@ export default function Hero() {
           >
             Trade. Journal. <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Analyze. Improve.</span>
           </motion.h1>
-          
-          <motion.p 
+
+          <motion.p
             className="text-xl text-zinc-400 mb-10 max-w-2xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -37,8 +39,8 @@ export default function Hero() {
           >
             Journal4me is designed to help you track your trades, understand your performance, and monitor your account progress — all in one place.
           </motion.p>
-          
-          <motion.div 
+
+          <motion.div
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -55,7 +57,7 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        <motion.div 
+        <motion.div
           className="mt-20 relative mx-auto max-w-5xl"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -65,8 +67,9 @@ export default function Hero() {
           <div className="relative rounded-xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl aspect-[16/9] flex items-center justify-center bg-[url('/mockup-placeholder.jpg')] bg-cover bg-center">
             {/* Fallback visual if no image */}
             <div className="absolute inset-0 bg-zinc-900/80 flex items-center justify-center flex-col text-zinc-500">
-               <span className="text-2xl font-bold mb-2">Notion Dashboard Mockup</span>
-               <p>High-quality product screenshot goes here</p>
+              <Image width={1024} height={576} loading='eager' objectFit='contain' src={tradeDashboard} alt="trade gallery picture" />
+              {/* <span className="text-2xl font-bold mb-2">Notion Dashboard Mockup</span> */}
+              {/* <p>High-quality product screenshot goes here</p> */}
             </div>
           </div>
         </motion.div>
